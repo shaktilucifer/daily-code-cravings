@@ -11,18 +11,31 @@ $(document).ready(function(){
   'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
 ];
 
+var veggies = [
+    "Kidney Beans",
+"Gourd",
+"Drumstick",
+"onions",
+"Peas",
+"Zucchini",
+"okra"
+];
+
 var books = [{"title":"Pancreas", "author":"John Doe"}, {"title":"breasts", "author":"..."}];
-var fuzzyhound = new FuzzySearch({source:states});
+var fuzzyhound = new FuzzySearch({source:veggies});
 $('#typeahead-input').typeahead({
-            minLength: 2,
+            minLength: 1,
             highlight: false //let FuzzySearch handle highlight
         },
         {
-            name: 'states',
+            name: 'veggie',
             source: fuzzyhound,
             templates: {
                 suggestion: function(result){return "<div>"+fuzzyhound.highlight(result)+"</div>"}
             }
-        });
+        }).bind('typeahead:change', function (obj, datum) {
+                console.log("changed value"+datum);
+    });
+
 
 });
