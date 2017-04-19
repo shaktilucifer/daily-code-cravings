@@ -81,8 +81,8 @@ FuzzySearch.defaultOptions =
     //  Tokens options
     //
 
-    token_query_min_length: 2,       // Avoid processing very small words, include greater or equal, in query
-    token_field_min_length: 3,       // include greater or equal, in item field
+    token_query_min_length: 1,       // Avoid processing very small words, include greater or equal, in query
+    token_field_min_length: 1,       // include greater or equal, in item field
     token_query_max_length: 64,      // Shorten large token to give more even performance.
     token_field_max_length: 64,      // Shorten large token to give more even performance.
     token_fused_max_length: 64,      // Shorten large token to give more even performance.
