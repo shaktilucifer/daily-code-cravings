@@ -6,11 +6,43 @@ class ListLinked {
     Node head;
     int size;
 
+    ListLinked() {
+        head = new Node();
+    }
+
+    //Returns if the list is empty or not
+    public boolean isEmpty() {
+        return head.getNext() == null;
+    }
+
+    /*
+    * Adds an element to the end of the list
+    */
+    public void addNode(Object data) {
+        Node nodeToAdd = new Node(data);
+        while (head.getNext() != null) {
+            head = head.getNext();
+        }
+        head.setNext(nodeToAdd);
+        this.size++;
+    }
+
+    public void printList() {
+        if (this.isEmpty()) {
+            System.out.println("The List is empty!");
+            return;
+        }
+        while (head.getNext() != null) {
+            System.out.println(head.getNext().data);
+            head = head.getNext();
+            System.out.println();
+        }
+    }
 
 }
 
 class Node {
-    private Object data;
+    public Object data;
     private Node next;
 
     Node() {
@@ -20,6 +52,7 @@ class Node {
 
     Node(Object data) {
         this.data = data;
+        this.next = null;
     }
 
     public Node getNext() {
@@ -35,6 +68,10 @@ class Node {
 
 class ListLinkedTester {
     public static void main(String[] args) {
-
+        ListLinked list = new ListLinked();
+        System.out.println(list.isEmpty());
+        list.addNode("testString");
+        System.out.println(list.isEmpty());
+        list.printList();
     }
 }
