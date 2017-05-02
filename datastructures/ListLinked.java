@@ -31,6 +31,20 @@ class ListLinked {
         currentNode.setNext(nodeToAdd);
         this.size++;
     }
+    
+  
+    public void delete(Object data){
+        Node currentNode = head.getNext();
+        Node prevNode = head;
+        while(currentNode != null){
+            if(currentNode.data.equals(data)){
+                prevNode.setNext(currentNode.getNext());
+                return;
+            }
+            prevNode = currentNode;
+            currentNode = currentNode.getNext();
+        }
+    }
 
     public Node find(Object data) {
         Node currentNode = head;
@@ -101,5 +115,7 @@ class ListLinkedTester {
         } else {
             System.out.println("Element is found");
         }
+        list.delete(2.2);
+        list.printList();
     }
 }
