@@ -1,38 +1,38 @@
 import java.util.*;
 import java.lang.*;
 import java.io.*;
-
-class ListLinked {
+class ListLinked{
     Node head;
     int size;
-
-    ListLinked() {
+    ListLinked(){
         head = new Node();
     }
-
     //Returns if the list is empty or not
-    public boolean isEmpty() {
+    public boolean isEmpty(){
         return head.getNext() == null;
     }
-
+    public int size(){
+        return size;
+    }
     /*
     * Adds an element to the end of the list
     */
-    public void addNode(Object data) {
+    public void addNode(Object data){
         Node nodeToAdd = new Node(data);
-        while (head.getNext() != null) {
-            head = head.getNext();
+        Node currentNode = head;
+        while(currentNode.getNext() != null){
+            currentNode = currentNode.getNext();
         }
-        head.setNext(nodeToAdd);
+        currentNode.setNext(nodeToAdd);
         this.size++;
     }
 
-    public void printList() {
-        if (this.isEmpty()) {
+    public void printList(){
+        if(this.isEmpty()){
             System.out.println("The List is empty!");
             return;
         }
-        while (head.getNext() != null) {
+        while(head.getNext() != null){
             System.out.println(head.getNext().data);
             head = head.getNext();
             System.out.println();
@@ -41,37 +41,41 @@ class ListLinked {
 
 }
 
-class Node {
+class Node{
     public Object data;
     private Node next;
-
-    Node() {
+    Node(){
         this.data = null;
         this.next = null;
     }
-
-    Node(Object data) {
+    Node(Object data){
         this.data = data;
         this.next = null;
     }
 
-    public Node getNext() {
+    public Node getNext(){
         return this.next;
     }
 
-    public void setNext(Node node) {
+    public void setNext(Node node){
         this.next = node;
     }
 
 
+
 }
 
-class ListLinkedTester {
-    public static void main(String[] args) {
+class ListLinkedTester
+{
+    public static void main (String[] args)
+    {
         ListLinked list = new ListLinked();
         System.out.println(list.isEmpty());
         list.addNode("testString");
+        list.addNode("TestString2");
+        list.addNode(2.2);
         System.out.println(list.isEmpty());
         list.printList();
+        System.out.println(list.size());
     }
 }
