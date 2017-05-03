@@ -3,8 +3,8 @@ import java.lang.*;
 import java.io.*;
 
 class ListLinked {
-    Node head;
-    int size;
+    private Node head;
+    private int size;
 
     ListLinked() {
         head = new Node();
