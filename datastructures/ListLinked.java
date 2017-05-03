@@ -45,6 +45,19 @@ class ListLinked {
             currentNode = currentNode.getNext();
         }
     }
+    
+    public void deleteFirst(){
+    	 Node currentNode = head.getNext();
+    	 head.setNext(currentNode.getNext());
+    	 return;
+    }
+    
+    public void insertFirst(Object data){
+		Node insertNode = new Node(data);
+		Node firstNode = head.getNext();
+		head.setNext(insertNode);
+		insertNode.setNext(firstNode);
+    }
 
     public Node find(Object data) {
         Node currentNode = head;
@@ -116,6 +129,10 @@ class ListLinkedTester {
             System.out.println("Element is found");
         }
         list.delete(2.2);
+        list.printList();
+        list.insertFirst(2.4);
+        list.printList();
+        list.deleteFirst();
         list.printList();
     }
 }
