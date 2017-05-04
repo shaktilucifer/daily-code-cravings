@@ -5,17 +5,24 @@ import java.io.*;
 class Queue {
 	private Node head;
 	private Node tail;
+	private int size;
+	
 	Queue(){
 		
 	}
 	
-	public void enqueue(){
+	public void enqueue(Object item){
 		
 	}
 	
 	public void dequeue(){
 		
 	}
+	
+	public Node peek(){
+		
+	}
+	
 	
 }
 
