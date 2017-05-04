@@ -10,16 +10,21 @@ class ListLinked {
         head = new Node();
     }
 
-    //Returns if the list is empty or not
+    /**
+     * Returns if the list is empty or not
+     */
     public boolean isEmpty() {
         return head.getNext() == null;
     }
-
+	
+	/**
+	 * Returns size of the list  
+	 */
     public int size() {
         return size;
     }
 
-    /*
+   /**
     * Adds an element to the end of the list
     */
     public void addNode(Object data) {
@@ -32,12 +37,14 @@ class ListLinked {
         this.size++;
     }
     
-  
+  	/**
+  	 * Delete element from the List 
+  	 */
     public void delete(Object data){
         Node currentNode = head.getNext();
         Node prevNode = head;
         while(currentNode != null){
-            if(currentNode.data.equals(data)){
+            if(currentNode.getData().equals(data)){
                 prevNode.setNext(currentNode.getNext());
                 return;
             }
@@ -46,23 +53,32 @@ class ListLinked {
         }
     }
     
+    /**
+     * Delete first element from the list
+     */ 
     public void deleteFirst(){
     	 Node currentNode = head.getNext();
     	 head.setNext(currentNode.getNext());
     	 return;
     }
     
+    /**
+     * Insert element in index 0
+     */ 
     public void insertFirst(Object data){
 		Node insertNode = new Node(data);
 		Node firstNode = head.getNext();
 		head.setNext(insertNode);
 		insertNode.setNext(firstNode);
     }
-
+	
+	/**
+	 * Find element in the list
+	 */
     public Node find(Object data) {
         Node currentNode = head;
         while (currentNode.getNext() != null) {
-            if (currentNode.getNext().data.equals(data)) {
+            if (currentNode.getNext().getData().equals(data)) {
                 return currentNode;
             }
             currentNode = currentNode.getNext();
@@ -70,6 +86,9 @@ class ListLinked {
         return null;
     }
 
+	/**
+	 * Print the list of elements
+	 */ 
     public void printList() {
         Node currentNode = head;
         if (this.isEmpty()) {
@@ -77,16 +96,18 @@ class ListLinked {
             return;
         }
         while (currentNode.getNext() != null) {
-            System.out.println(currentNode.getNext().data);
+	        currentNode.getNext().printNode();
             currentNode = currentNode.getNext();
-            System.out.println();
         }
     }
 
 }
 
+/**
+ * Node Class
+ */ 
 class Node {
-    public Object data;
+    private Object data;
     private Node next;
 
     Node() {
@@ -106,10 +127,25 @@ class Node {
     public void setNext(Node node) {
         this.next = node;
     }
+    
+    public Object getData(){
+    	return this.data;
+    }
+    
+    public void setData(Object data){
+    	this.data = data;
+    }
+    
+    public void printNode(){
+    	System.out.println(this.data);
+    }
 
 
 }
 
+/**
+ * Testing Class
+ */ 
 class ListLinkedTester {
     public static void main(String[] args) {
         ListLinked list = new ListLinked();
@@ -128,10 +164,13 @@ class ListLinkedTester {
         } else {
             System.out.println("Element is found");
         }
+        // delete element
         list.delete(2.2);
         list.printList();
+        // insert element first
         list.insertFirst(2.4);
         list.printList();
+        // delete element first
         list.deleteFirst();
         list.printList();
     }
