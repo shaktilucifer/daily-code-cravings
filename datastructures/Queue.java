@@ -8,14 +8,15 @@ class Queue {
 	private int size;
 	
 	public void enqueue(Object item){
-		Node node = new Node(item);
+		Node temp = tail;
+		tail = new Node(item);
 		if(size == 0){
-			tail = node;
 			head = tail;
+			size++;
 			return;
-		}		
-		tail.setNext(node);
-		tail = node;
+		}
+		temp.setNext(tail);
+		size++;
 	}
 	
 	public void dequeue(){
@@ -60,7 +61,7 @@ class Node{
 	}
 	
 	public void printNode(){
-		System.out.println(this.data);
+		System.out.println(this.item);
 	}
 }
 
@@ -69,6 +70,10 @@ class Node{
  */ 
 class QueueTester {
     public static void main(String[] args) {
-       
+       Queue que = new Queue();
+       System.out.println("Enqueue");
+       que.enqueue(2.2);
+       que.enqueue(2.4);
+       que.printQueue();
     }
 }
