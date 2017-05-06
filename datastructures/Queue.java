@@ -74,6 +74,5 @@ class QueueTester {
        System.out.println("Enqueue");
        que.enqueue(2.2);
        que.enqueue(2.4);
-       que.printQueue();
     }
 }
