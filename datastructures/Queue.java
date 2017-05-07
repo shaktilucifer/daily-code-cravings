@@ -20,7 +20,13 @@ class Queue {
 	}
 	
 	public void dequeue(){
-		
+		if(size == 0){
+			head = null;
+			tail = null;
+			size--;
+			return;
+		}
+		 head = head.getNext();
 	}
 	
 	public Node peek(){
