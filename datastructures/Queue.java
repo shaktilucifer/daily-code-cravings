@@ -5,7 +5,7 @@ import java.io.*;
 class Queue {
 	private Node head;
 	private Node tail;
-	private int size;
+	private int size = 0;
 	
 	public void enqueue(Object item){
 		Node temp = tail;
@@ -23,15 +23,16 @@ class Queue {
 		if(size == 0){
 			head = null;
 			tail = null;
-			size--;
 			return;
 		}
-		 head = head.getNext();
+		size--;
+		head = head.getNext();
 	}
 	
 	public Node peek(){
 		
 		//Peek for node 
+		tail.printNode();
 		return tail;
 	}
 	
@@ -84,8 +85,13 @@ class Node{
 class QueueTester {
     public static void main(String[] args) {
        Queue que = new Queue();
-       System.out.println("Enqueue");
+       System.out.println(que.isEmpty());
        que.enqueue(2.2);
        que.enqueue(2.4);
+       que.enqueue("imprfectluck");
+       que.peek();
+       que.dequeue();
+       System.out.println(que.size());
     }
+    
 }
