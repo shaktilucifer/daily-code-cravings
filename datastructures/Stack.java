@@ -22,6 +22,15 @@ class Stack
 		size++;
 	}
 	
+	public void pop(Object data){
+		if(top == null){
+			System.out.println("Cannot pop an empty stack");
+		}
+		System.out.println("Item"+top.getData()+"is popped");
+		top = top.getNext();
+		size--;
+	}
+	
 	
 
 
