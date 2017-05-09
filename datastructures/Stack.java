@@ -7,6 +7,21 @@ class Stack
 	private Node top;
 	private int size;
 	
+	public boolean isEmpty(){
+		return size == 0;
+	}
+	
+	public int size(){
+		return size;
+	}
+	
+	public void push(Object data){
+		Node temp = top;
+		top = new Node(data);
+		top.setNext(temp);
+		size++;
+	}
+	
 	
 
 
@@ -15,6 +30,7 @@ class Stack
 class Node{
 	private Object data;
 	private Node next;
+
 	
 	Node(Object data){
 		this.data = data;
