@@ -30,6 +30,15 @@ class Stack {
         top = top.getNext();
         size--;
     }
+    
+    public Object peek(){
+    	if(top == null){
+    		System.out.println("Empty Stack");
+    		return null;
+    	}
+    	return top.getData();
+    	
+    }
 }
 
 class Node {
@@ -73,5 +82,12 @@ class StackTester {
         stack.pop();
         stack.pop();
         stack.pop();
+        stack.peek();
+        stack.push("new String");
+        stack.push("25");
+        System.out.println(stack.peek());
+        stack.pop();
+        System.out.println(stack.peek());
+        System.out.println(stack.size() == 1);
     }
 }
