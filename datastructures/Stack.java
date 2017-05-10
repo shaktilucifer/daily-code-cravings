@@ -30,10 +30,6 @@ class Stack {
         top = top.getNext();
         size--;
     }
-
-
-
-
 }
 
 class Node {
