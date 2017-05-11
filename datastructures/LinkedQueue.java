@@ -8,8 +8,8 @@ class LinkedQueue{
 	private int size;
 	
 	LinkedQueue(){
-		this.head = null;
-		this.tail = null;
+		this.head = new Node();
+		this.tail = new Node();
 	}
 	
 	public boolean isEmpty(){
@@ -25,6 +25,7 @@ class LinkedQueue{
 		if(size() == 0){
 			head.setNext(newNode);
 			tail = newNode;
+			size++;
 			return;
 		}
 		newNode.setNext(tail);
@@ -37,6 +38,7 @@ class LinkedQueue{
 		if(temp == null){
 			System.out.println("cannot pop empty stack");
 		}
+		System.out.println("Popped Item: "+temp.getData());
 		head.setNext(temp.getNext());
 		size--;
 	}
@@ -75,5 +77,13 @@ class LinkedQueueTester
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
+		LinkedQueue app =new LinkedQueue();
+		app.push(2.2);
+		app.push(2.4);
+		app.push("Imprfectluck");
+		System.out.println(app.size());
+		app.pop();
+		System.out.println(app.size());
+		
 	}
 }
