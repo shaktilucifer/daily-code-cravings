@@ -1,10 +1,39 @@
-
 import java.util.*;
 import java.lang.*;
 import java.io.*;
 
 class LinkedQueue{
-
+	private Node head;
+	private Node tail;
+	private int size;
+	
+	LinkedQueue(){
+		this.head = null;
+		this.tail = null;
+	}
+	
+	public boolean isEmpty(){
+		return size == 0;
+	}
+	
+	public int size(){
+		return size;
+	}
+	
+	public void push(Object data){
+		Node newNode = new Node(data);
+		Node firstNode = head.getNext();
+		if(firstNode == null){
+			head.setNext(newNode);
+			tail = newNode;
+			return;
+		}
+		head.setNext(newNode);
+		newNode.setNext(firstNode);
+		size++;
+	}
+	
+	
 
 
 	
