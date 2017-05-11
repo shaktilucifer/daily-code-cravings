@@ -22,21 +22,24 @@ class LinkedQueue{
 	
 	public void push(Object data){
 		Node newNode = new Node(data);
-		Node firstNode = head.getNext();
-		if(firstNode == null){
+		if(size() == 0){
 			head.setNext(newNode);
 			tail = newNode;
 			return;
 		}
-		head.setNext(newNode);
-		newNode.setNext(firstNode);
+		newNode.setNext(tail);
+		tail = newNode;
 		size++;
 	}
 	
-	
-
-
-	
+	public void pop(){
+		Node temp = head.getNext();
+		if(temp == null){
+			System.out.println("cannot pop empty stack");
+		}
+		head.setNext(temp.getNext());
+		size--;
+	}
 }
 
 class Node{
