@@ -20,7 +20,7 @@ class LinkedQueue{
 		return size;
 	}
 	
-	public void push(Object data){
+	public void enqueue(Object data){
 		Node newNode = new Node(data);
 		if(size() == 0){
 			head.setNext(newNode);
@@ -33,7 +33,7 @@ class LinkedQueue{
 		size++;
 	}
 	
-	public void pop(){
+	public void dequeue(){
 		Node temp = head.getNext();
 		if(temp == null){
 			System.out.println("cannot pop empty stack");
@@ -89,11 +89,12 @@ class LinkedQueueTester
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		LinkedQueue app =new LinkedQueue();
-		app.push(2.2);
-		app.push(2.4);
-		app.push("Imprfectluck");
+		app.enqueue(2.2);
+		app.enqueue(2.4);
+		app.enqueue("Imprfectluck");
 		System.out.println(app.size());
-		app.pop();
+		app.dequeue();
+		app.peek();
 		System.out.println(app.size());
 		
 	}
