@@ -37,10 +37,21 @@ class LinkedQueue{
 		Node temp = head.getNext();
 		if(temp == null){
 			System.out.println("cannot pop empty stack");
+			return;
 		}
 		System.out.println("Popped Item: "+temp.getData());
 		head.setNext(temp.getNext());
 		size--;
+	}
+	
+	public Object peek(){
+		Node temp = head.getNext();
+		if( temp == null){
+			System.out.println("Empty Stack");
+			return temp;
+		}
+		System.out.println(temp.getData());
+		return temp.getData();
 	}
 }
 
