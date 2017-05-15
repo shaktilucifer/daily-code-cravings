@@ -23,6 +23,7 @@ class Queue {
 		if(size == 0){
 			head = null;
 			tail = null;
+			System.out.println("Empty queue");
 			return;
 		}
 		size--;
@@ -32,6 +33,10 @@ class Queue {
 	public Node peek(){
 		
 		//Peek for node 
+		if(tail == null){
+			System.out.println("Empty Queue");
+			return null;
+		}
 		tail.printNode();
 		return tail;
 	}
@@ -91,7 +96,11 @@ class QueueTester {
        que.enqueue("imprfectluck");
        que.peek();
        que.dequeue();
+       que.dequeue();
+       que.dequeue();
+       que.dequeue();
        System.out.println(que.size());
+       que.peek();
     }
     
 }
