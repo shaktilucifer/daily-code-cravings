@@ -13,6 +13,9 @@ class DeleteDuplicates
 				positionPointer++;
 			}
 		}
+		for(int i=positionPointer;i < arr.length ;i++){
+		    arr[i] = 0;
+		}
 		printArray(arr);
 	}
 	
