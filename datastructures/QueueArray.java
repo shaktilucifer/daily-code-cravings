@@ -14,7 +14,24 @@ class QueueArray{
             return;
         }
             queueArray[tailIndex++] = data;
+            if(tailIndex == queueArray.length){
+                tailIndex =0;
+            }
             size++;
+    }
+    
+    public Object dequeue(){
+        if(isEmpty()){
+            System.out.println("Empty queue");
+            return null;
+        }
+        Object temp = queueArray[headIndex++];
+        queueArray[headIndex-1] = null;
+        size--;
+        if(headIndex == queueArray.length){
+            headIndex = 0;
+        }
+        return temp;
     }
     
     
@@ -48,6 +65,15 @@ class QueueArrayApp{
             for(int i=0;i<10;i++){
                 queueArray.enqueue(2.2 + i);
             }
+            queueArray.dequeue();
+            queueArray.dequeue();
+            queueArray.printQueue();
+             for(int i=0;i<7;i++){
+                queueArray.dequeue();
+            }
+            queueArray.printQueue();
+            queueArray.enqueue("Imprfectluck");
+            queueArray.printQueue();
 
 	 }
 
