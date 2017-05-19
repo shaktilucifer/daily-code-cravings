@@ -1,7 +1,46 @@
 class DoublyLinkedList{
 	private Node head;
 	private int size;
-	
+
+	public DoublyLinkedList append(){
+			return this;
+	}
+
+	public boolean isEmpty(){
+		return size == 0;
+	}
+
+	public Object value_at(int index){
+		return null;
+	}
+
+	public void push_front(Object data){
+
+	}
+
+	public Object front(){
+		return null;	
+	}
+
+	public Object back(){
+		return null;
+	}
+
+	public void insert(int index, Object value){
+
+	}
+
+	public void erase(int index){
+
+	}
+
+	public DoublyLinkedList reverse(){
+		return null;
+	}
+
+	public void removeValue(Object value){
+
+	}
 
 }
 
@@ -26,7 +65,7 @@ class Node{
 		this.data = data;
 	}
 
-	public printNode(Node node){
+	public void printNode(Node node){
 		System.out.println(node.getData());
 	}
 }
