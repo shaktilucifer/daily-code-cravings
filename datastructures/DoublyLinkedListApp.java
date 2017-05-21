@@ -93,10 +93,13 @@ class DoublyLinkedList{
 				if(i++ == index){
 					temp.getPrev().setNext(temp.getNext());
 					temp.getNext().setPrev(temp.getPrev()); 
+					size--;
 					return;
 				}
 			}
 			System.out.println("index not found");
+		}else{
+			System.out.println("Empty List!");
 		}
 	}
 
