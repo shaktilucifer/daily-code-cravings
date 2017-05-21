@@ -91,8 +91,8 @@ class DoublyLinkedList{
 			while(temp.getNext() != null){
 				temp = temp.getNext();
 				if(i++ == index){
-					temp.getPrev().setNext(temp.getNext());
-					temp.getNext().setPrev(temp.getPrev()); 
+					temp.getPrev().setNext(temp.getNext()) ;
+					if(temp.getNext() != null) 	temp.getNext().setPrev(temp.getPrev());
 					size--;
 					return;
 				}
@@ -181,7 +181,8 @@ class DoublyLinkedListApp{
 		System.out.println(doublyLinkedList.value_at(2));
 		System.out.println("Erasing..");
 		doublyLinkedList.erase(0);
-		doublyLinkedList.erase(3);
+		doublyLinkedList.erase(5);
+		System.out.println("Size: "+doublyLinkedList.size());
 		doublyLinkedList.printList();
 
 	}
