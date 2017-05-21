@@ -69,7 +69,15 @@ class DoublyLinkedList{
 	}
 
 	public Object back(){
-		return null;
+		Node temp = head;
+		if(temp.getNext() == null){
+			System.out.println("Empty list");
+			return null;
+		}
+		while(temp.getNext() != null){
+			temp = temp.getNext();
+		}
+		return temp.getData();
 	}
 
 	public void insert(int index, Object value){
@@ -77,7 +85,19 @@ class DoublyLinkedList{
 	}
 
 	public void erase(int index){
-
+		Node temp = head;
+		int i = 0;
+		if(!isEmpty()){
+			while(temp.getNext() != null){
+				temp = temp.getNext();
+				if(i++ == index){
+					temp.getPrev().setNext(temp.getNext());
+					temp.getNext().setPrev(temp.getPrev()); 
+					return;
+				}
+			}
+			System.out.println("index not found");
+		}
 	}
 
 	public DoublyLinkedList reverse(){
@@ -154,7 +174,12 @@ class DoublyLinkedListApp{
 		doublyLinkedList.push_front("first!");
 		doublyLinkedList.printList();
 		System.out.println(doublyLinkedList.front());
+		System.out.println(doublyLinkedList.back());
 		System.out.println(doublyLinkedList.value_at(2));
+		System.out.println("Erasing..");
+		doublyLinkedList.erase(0);
+		doublyLinkedList.erase(3);
+		doublyLinkedList.printList();
 
 	}
 }
