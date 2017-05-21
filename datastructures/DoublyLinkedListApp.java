@@ -30,6 +30,20 @@ class DoublyLinkedList{
 	}
 
 	public Object value_at(int index){
+		if(index  > size){
+			System.out.println("Index out of bounds");
+			return null;
+		}
+		int i = 0;
+		Node temp = head;
+		while(temp.getNext() != null){
+			// System.out.println(i);
+			// System.out.println(index);
+			if(i++ == index){
+				return temp.getNext().getData();
+			}
+			temp = temp.getNext();
+		}
 		return null;
 	}
 
@@ -47,7 +61,11 @@ class DoublyLinkedList{
 	}
 
 	public Object front(){
-		return null;	
+		if(head.getNext() == null){
+			System.out.println("List is empty");
+			return null;
+		}	
+		return head.getNext().getData();	
 	}
 
 	public Object back(){
@@ -133,7 +151,10 @@ class DoublyLinkedListApp{
 			doublyLinkedList.append(i);
 		}
 
+		doublyLinkedList.push_front("first!");
 		doublyLinkedList.printList();
+		System.out.println(doublyLinkedList.front());
+		System.out.println(doublyLinkedList.value_at(2));
 
 	}
 }
