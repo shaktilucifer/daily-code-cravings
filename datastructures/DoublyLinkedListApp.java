@@ -125,7 +125,13 @@ class DoublyLinkedList{
 	}
 
 	public DoublyLinkedList reverse(){
-		return null;
+		DoublyLinkedList reverseList = new DoublyLinkedList();
+		Node temp = head;
+		while(temp.getNext() != null){
+			temp = temp.getNext();
+			reverseList.push_front(temp.getData());
+		}
+		return reverseList;
 	}
 
 	public void removeValue(Object value){
@@ -223,7 +229,11 @@ class DoublyLinkedListApp{
 		System.out.println("Inserting..");
 		doublyLinkedList.insert(3,"Imprfectluck");
 		System.out.println(doublyLinkedList.size());
-
 		doublyLinkedList.printList();
+
+		DoublyLinkedList reverseList = doublyLinkedList.reverse();
+		reverseList.printList();
+
+
 	}
 }
