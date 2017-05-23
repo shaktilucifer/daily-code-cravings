@@ -124,6 +124,17 @@ class DoublyLinkedList{
 	}
 
 	public void removeValue(Object value){
+			Node temp = head;
+			while(temp.getNext() != null){
+				temp = temp.getNext();
+				if(temp.getData() == value){
+					temp.getPrev().setNext(temp.getNext());
+					if(temp.getNext() != null) 	temp.getNext().setPrev(temp.getPrev());
+					size--;
+					System.out.println("value "+value+" is removed");
+					return;				}
+			}
+			System.out.println("Value not found");
 
 	}
 
@@ -201,7 +212,9 @@ class DoublyLinkedListApp{
 		System.out.println("Size: "+doublyLinkedList.size());
 		doublyLinkedList.printList();
 		System.out.println("Inserting..");
-		doublyLinkedList.insert(0,"123");
 		doublyLinkedList.printList();
+		doublyLinkedList.removeValue("first!");
+		doublyLinkedList.removeValue(0);
+		System.out.println(doublyLinkedList.size());
 	}
 }
