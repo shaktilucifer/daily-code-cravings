@@ -84,13 +84,16 @@ class DoublyLinkedList{
 		int i = 0;
 		if(isEmpty()){
 			head.setNext(nodeToInsert);
+			nodeToInsert.setPrev(head);
 			System.out.println("isEmpty");
 			return;
 		}
 		while(temp.getNext() != null){
 			if(i++ == index){
+				if(temp.getNext() != null) temp.getNext().setPrev(nodeToInsert); 
 				temp.setNext(nodeToInsert);
 				nodeToInsert.setNext(temp.getNext());
+				nodeToInsert.setPrev(temp);
 				size++;
 				return;
 			}
