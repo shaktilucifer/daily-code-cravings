@@ -25,7 +25,7 @@ class ListLinked {
     }
 
    /**
-    * Adds an element to the end of the list
+    * Adds an element to the end of the listx`
     */
     public void addNode(Object data) {
         Node nodeToAdd = new Node(data);

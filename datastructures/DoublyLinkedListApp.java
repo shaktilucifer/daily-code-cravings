@@ -37,8 +37,6 @@ class DoublyLinkedList{
 		int i = 0;
 		Node temp = head;
 		while(temp.getNext() != null){
-			// System.out.println(i);
-			// System.out.println(index);
 			if(i++ == index){
 				return temp.getNext().getData();
 			}
@@ -81,6 +79,24 @@ class DoublyLinkedList{
 	}
 
 	public void insert(int index, Object value){
+		Node temp = head;
+		Node nodeToInsert = new Node(value);
+		int i = 0;
+		if(isEmpty()){
+			head.setNext(nodeToInsert);
+			System.out.println("isEmpty");
+			return;
+		}
+		while(temp.getNext() != null){
+			if(i++ == index){
+				temp.setNext(nodeToInsert);
+				nodeToInsert.setNext(temp.getNext());
+				size++;
+				return;
+			}
+			temp = temp.getNext();
+
+		}
 
 	}
 
@@ -184,6 +200,8 @@ class DoublyLinkedListApp{
 		doublyLinkedList.erase(5);
 		System.out.println("Size: "+doublyLinkedList.size());
 		doublyLinkedList.printList();
-
+		System.out.println("Inserting..");
+		doublyLinkedList.insert(0,"123");
+		doublyLinkedList.printList();
 	}
 }
