@@ -86,14 +86,16 @@ class DoublyLinkedList{
 			head.setNext(nodeToInsert);
 			nodeToInsert.setPrev(head);
 			System.out.println("isEmpty");
+			size++;
 			return;
 		}
 		while(temp.getNext() != null){
 			if(i++ == index){
-				if(temp.getNext() != null) temp.getNext().setPrev(nodeToInsert); 
-				temp.setNext(nodeToInsert);
+				System.out.println("Inserted once");
 				nodeToInsert.setNext(temp.getNext());
 				nodeToInsert.setPrev(temp);
+				if(temp.getNext() != null) temp.getNext().setPrev(nodeToInsert); 
+				temp.setNext(nodeToInsert);
 				size++;
 				return;
 			}
@@ -123,7 +125,13 @@ class DoublyLinkedList{
 	}
 
 	public DoublyLinkedList reverse(){
-		return null;
+		DoublyLinkedList reverseList = new DoublyLinkedList();
+		Node temp = head;
+		while(temp.getNext() != null){
+			temp = temp.getNext();
+			reverseList.push_front(temp.getData());
+		}
+		return reverseList;
 	}
 
 	public void removeValue(Object value){
@@ -214,10 +222,18 @@ class DoublyLinkedListApp{
 		doublyLinkedList.erase(5);
 		System.out.println("Size: "+doublyLinkedList.size());
 		doublyLinkedList.printList();
-		System.out.println("Inserting..");
-		doublyLinkedList.printList();
 		doublyLinkedList.removeValue("first!");
 		doublyLinkedList.removeValue(0);
 		System.out.println(doublyLinkedList.size());
+
+		System.out.println("Inserting..");
+		doublyLinkedList.insert(3,"Imprfectluck");
+		System.out.println(doublyLinkedList.size());
+		doublyLinkedList.printList();
+
+		DoublyLinkedList reverseList = doublyLinkedList.reverse();
+		reverseList.printList();
+
+
 	}
 }
