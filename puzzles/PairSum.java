@@ -22,6 +22,10 @@ class PairSum{
 			this.index1 = index1;
 			this.index2 = index2;
 		}
+		public void printIndices(){
+				System.out.println(index1);
+		System.out.println(index2);
+		}
 	}
 	
 	public Pair findPair(int[] array,int sum){
@@ -42,5 +46,9 @@ class PairSum{
 	public static void main(String[] args){
 		PairSum p = new PairSum();
 		Pair pair =	p.findPair(new int[]{8, 7, 2, 5, 3, 1},10);
+		pair.printIndices();
+		pair =	p.findPair(new int[]{2, 7, 2, 5, 3, 1},10);
+		pair.printIndices();
+
 	}
 }
