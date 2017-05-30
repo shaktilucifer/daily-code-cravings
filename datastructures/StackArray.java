@@ -15,13 +15,20 @@ class StackArray{
     
     public StackArray push(Object data){
         
-        if(size < stack.length){
-            size++;
-            stack[size] = data;
-        }else{
-            System.out.println("Stack is full!");
-        }
+        if(size > stack.length){
+            this.resizeStack(); 
+        }   
+        size++;
+        stack[size] = data;
         return this;
+    }
+
+    public void resizeStack(){
+        Object[] temp = new Object[stack.length * 2];
+        for(int i=0; i < stack.length - 1; i++ ){
+            temp[i] = stack[i];
+        }
+        this.stack = temp;
     }
     
     public Object pop(){
