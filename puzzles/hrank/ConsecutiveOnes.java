@@ -14,12 +14,10 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class ConsecutiveOnes {
-
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int max = 0;
+class ConsecutiveOnes {
+	
+	public int countMaxConsecutiveOnes(int n){
+		 int max = 0;
         int reminder = 0;
         int onesCounter = 0;
         while(n > 0){
@@ -34,6 +32,12 @@ public class ConsecutiveOnes {
             }
             n = n / 2;         
         }
-        System.out.println(max > onesCounter ? max : onesCounter);
+        return max > onesCounter ? max : onesCounter;
+	}
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        System.out.println(new ConsecutiveOnes().countMaxConsecutiveOnes(n));
     }
 }
