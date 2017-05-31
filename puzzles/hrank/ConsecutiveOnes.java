@@ -15,6 +15,9 @@ import java.math.*;
 import java.util.regex.*;
 
 class ConsecutiveOnes {
+	private int max(int a, int b){
+		return a > b ? a : b;
+	}
 	
 	public int countMaxConsecutiveOnes(int n){
 		 int max = 0;
@@ -25,19 +28,18 @@ class ConsecutiveOnes {
             if(reminder == 1){
                 onesCounter++;
             }else{ 
-                if(onesCounter > max){
-                    max = onesCounter;
-                }
+                    max = max(max,onesCounter);
                     onesCounter = 0;
             }
             n = n / 2;         
         }
-        return max > onesCounter ? max : onesCounter;
+        return max(max,onesCounter);
 	}
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         System.out.println(new ConsecutiveOnes().countMaxConsecutiveOnes(n));
+       
     }
 }
