@@ -29,6 +29,7 @@ class BubbleSortSwapCounter {
         for(int a_i=0; a_i < a.length; a_i++){
             System.out.print(a[a_i]+" ");
         }
+        System.out.println();
 	}
 
     public static void main(String[] args) {
@@ -38,8 +39,6 @@ class BubbleSortSwapCounter {
        bssc.numSwapsBubbleSort(new int[]{3,-1,0,1,2,-9});
        bssc.numSwapsBubbleSort(new int[]{-9,-9,-9,-9,-9,-9});
        bssc.numSwapsBubbleSort(new int[]{19,-9,-9,-9,-9,-9});
-
-
 
     }
 }
