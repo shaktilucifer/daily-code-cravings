@@ -1,3 +1,12 @@
+// Sample Input
+// 2 . - num samples
+// Hacker
+// Rank
+
+// Sample Output
+// Hce akr
+// Rn ak
+
 import java.io.*;
 import java.util.*;
 
