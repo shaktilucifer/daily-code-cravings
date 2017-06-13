@@ -1,3 +1,15 @@
+// Sample Input
+
+// 6
+// 1
+// 2
+// 2
+// 3
+// 3
+// 4
+// Sample Output
+
+// 1 2 3 4 
 import java.io.*;
 import java.util.*;
 class Node{
