@@ -1,3 +1,14 @@
+// Sample Input
+
+// 3
+// 12
+// 5
+// 7
+// Sample Output
+
+// Not prime
+// Prime
+// Prime
 import java.io.*;
 import java.util.*;
 
