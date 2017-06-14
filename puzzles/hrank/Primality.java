@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Primality {
+class Primality {
     
     public void printPrimality(int checkPrime){
             if(checkPrime == 1){
