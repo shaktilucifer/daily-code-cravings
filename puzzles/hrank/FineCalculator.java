@@ -1,3 +1,12 @@
+// Sample Input
+
+// 9 6 2015
+// 6 6 2015
+// Sample Output
+
+// 45
+
+
 import java.io.*;
 import java.util.*;
 
