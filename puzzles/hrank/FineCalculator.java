@@ -14,6 +14,8 @@ class FineCalculator {
     
     public void printFine(int[] dateArray){
       int fine = 0;
+        
+        //Note: this condition gave your trouble. Always look for edge cases in normal order and reverse 
         if(dateArray[2] < dateArray[5] || (dateArray[2] == dateArray[5] && dateArray[1] < dateArray[4])){
             fine = 0;
             System.out.println(fine);
