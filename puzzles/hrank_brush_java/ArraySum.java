@@ -1,8 +1,12 @@
+// Sample Input
+
+// 6
+// 1 2 3 4 10 11
+// Sample Output
+
+// 31
 import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class ArraySum {
 
