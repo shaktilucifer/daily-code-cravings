@@ -38,3 +38,10 @@ public class CompareTriplets {
 
     }
 }
+// Sample Input
+
+// 5 6 7
+// 3 6 10
+// Sample Output
+
+// 1 1 
