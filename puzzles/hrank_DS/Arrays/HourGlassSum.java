@@ -29,3 +29,18 @@ public class HourGlassSu, {
         System.out.println(maxHourglassSum);
     }
 }
+// Output Format
+
+// Print the largest (maximum) hourglass sum found in .
+
+// Sample Input
+
+// 1 1 1 0 0 0
+// 0 1 0 0 0 0
+// 1 1 1 0 0 0
+// 0 0 2 4 4 0
+// 0 0 0 2 0 0
+// 0 0 1 2 4 0
+// Sample Output
+
+// 19
