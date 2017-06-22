@@ -1,13 +1,9 @@
 import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class TestCase {
 
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
         System.out.println("5");
         System.out.println("4 1");
         System.out.println("-15 -9999 11 0");
