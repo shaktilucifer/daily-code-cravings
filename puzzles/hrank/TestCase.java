@@ -23,3 +23,17 @@ public class TestCase {
     
     }
 }
+// Output Format
+// Hacker rank day 27 question
+// For each test case, print the word YES if the class is canceled or NO if it is not.
+// Example
+
+// When properly solved, this input:
+// 2
+// 4 3
+// -1 -3 4 2
+// 4 2
+// 0 -1 2 1
+// Produces this output:
+// YES
+// NO
