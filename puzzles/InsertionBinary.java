@@ -2,6 +2,11 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
+/**
+ * Trying out binary search as a tool to insert elements into a sorted array
+ * The function returns the index one higher than the point of insertion.
+ * It returns the same index if the value is already present.
+ */
 
 class InsertionBinary
 {
