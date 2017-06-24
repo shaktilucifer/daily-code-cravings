@@ -21,12 +21,17 @@ class DeleteDuplicates
 	
 	public void printArray(int[] arr){
 		for(int i=0; i< arr.length; i++){
-			System.out.println(arr[i]);
+			System.out.print(arr[i]+" ");
 		}
+		System.out.println();
 	}
 	public static void main (String[] args) throws java.lang.Exception
 	{
 	    DeleteDuplicates delObj = new DeleteDuplicates();
 	    delObj.deleteDuplicates(new int[]{1,2,3,5,5,11,11,11,13});
+	    delObj.deleteDuplicates(new int[]{1,1,1,1,1,1});
+	    delObj.deleteDuplicates(new int[]{-1,-1,-1,-1,1,1,1});
+
+
 	}
 }
