@@ -28,17 +28,13 @@ class InsertionBinary {
 
     public static void main(String[] args) throws java.lang.Exception {
         InsertionBinary i = new InsertionBinary();
-        int index = i.findInsertionPoint(new int[] {
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            9
-        }, 9);
+        int[] arr = {1,2,3,4,5,6,7,9};
+        int index = i.findInsertionPoint(arr, 8);
         System.out.println(index);
+        index = i.findInsertionPoint(arr,2.2f);
+        System.out.println(index);
+		index = i.findInsertionPoint(arr,-2.2f);
+		System.out.println(index);
 
     }
 }
