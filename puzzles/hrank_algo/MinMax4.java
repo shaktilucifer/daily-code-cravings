@@ -22,3 +22,15 @@ public class MinMax4 {
         System.out.print(min +" "+max);
     }
 }
+// Sample Input
+
+// 1 2 3 4 5
+// Sample Output
+
+// 10 14
+
+// Output Format
+
+// Print two space-separated long integers denoting the respective minimum and maximum values that can be 
+// calculated by summing exactly four of the five integers. 
+//     (The output can be greater than 32 bit integer.)
