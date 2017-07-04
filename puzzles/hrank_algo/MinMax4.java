@@ -46,6 +46,23 @@ class MinMax {
         mm.printMinMax(arr);
         System.out.println();
         mm.printMinMaxFast(arr);
+         int[] arr1 = new int[] {
+            5,
+            4,
+            3,
+            2,
+            1
+        };
+        mm.printMinMaxFast(arr1);
+         int[] arr2 = new int[] {
+            1,
+            1,
+            1,
+            1,
+            1
+        };
+       mm.printMinMaxFast(arr2);
+
     }
 }
 // Sample Input
