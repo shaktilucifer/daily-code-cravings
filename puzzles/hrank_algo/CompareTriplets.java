@@ -30,6 +30,7 @@ public class CompareTriplets {
         int b1 = in.nextInt();
         int b2 = in.nextInt();
         int[] result = solve(a0, a1, a2, b0, b1, b2);
+        int[] result1 = solve(3,4,5,12,1,1);
         for (int i = 0; i < result.length; i++) {
             System.out.print(result[i] + (i != result.length - 1 ? " " : ""));
         }
