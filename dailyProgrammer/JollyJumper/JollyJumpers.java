@@ -26,6 +26,8 @@ class JollyJumpers
 	{
 		JollyJumpers jolly = new JollyJumpers();
 		jolly.iSJollyJumpers(new int[]{19 ,22 ,24 ,25},4);
+		jolly.iSJollyJumpers(new int[]{0 ,2 ,0 ,2},4);
+
 
 	}
 }
