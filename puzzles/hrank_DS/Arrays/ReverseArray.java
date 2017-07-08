@@ -4,7 +4,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class Solution {
+class Solution {
     
     public void printReverse(int[] arr,int n){        
         //Printing in reverse
@@ -13,14 +13,9 @@ public class Solution {
         }
     }
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int arr[] = new int[n];
-        for(int arr_i=0; arr_i < n; arr_i++){
-            arr[arr_i] = in.nextInt();
-        }
+       int[] arr = new int[]{12,3,4,5,22};
         Solution s= new Solution();
-        s.printReverse(arr,n);
+        s.printReverse(arr,arr.length);
     }
 }
 // Sample Input
