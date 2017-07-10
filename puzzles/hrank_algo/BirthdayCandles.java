@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class BirthdayCandles {
+class BirthdayCandles {
 
     static int birthdayCakeCandles(int n, int[] ar) {
             Integer max = -1;
@@ -22,13 +22,12 @@ public class BirthdayCandles {
     }
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int[] ar = new int[n];
-        for(int ar_i = 0; ar_i < n; ar_i++){
-            ar[ar_i] = in.nextInt();
-        }
-        int result = birthdayCakeCandles(n, ar);
+        int[] ar = new int[]{3,2,1,3};
+        int result = birthdayCakeCandles(ar.length, ar);
+        System.out.println(result);
+        
+        ar = new int[]{3,3,3,3};
+        result = birthdayCakeCandles(ar.length, ar);
         System.out.println(result);
     }
 }
