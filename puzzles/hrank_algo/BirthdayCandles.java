@@ -31,3 +31,14 @@ class BirthdayCandles {
         System.out.println(result);
     }
 }
+// Output Format
+
+// Print the number of candles Colleen blows out on a new line.
+
+// Sample Input 0
+
+// 4
+// 3 2 1 3
+// Sample Output 0
+
+// 2
