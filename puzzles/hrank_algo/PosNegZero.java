@@ -20,8 +20,6 @@ public class PosNegZero {
         System.out.println(pos/n);
         System.out.println(neg/n);
         System.out.println(zeroes/n);
-
-
     }
 }
 // Sample Input
