@@ -31,3 +31,9 @@ public class Solution {
         System.out.println(result);
     }
 }
+// Sample Input
+
+// 07:05:45PM
+// Sample Output
+
+// 19:05:45
