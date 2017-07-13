@@ -25,9 +25,16 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String s = in.next();
+        String s = "12:00:00PM";
         String result = timeConversion(s);
+        System.out.println(result);
+
+        s = "01:00:00PM";
+        result = timeConversion(s);
+        System.out.println(result);
+
+        s = "12:00:00AM";
+        result = timeConversion(s);
         System.out.println(result);
     }
 }
