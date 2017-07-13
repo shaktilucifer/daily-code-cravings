@@ -1,20 +1,15 @@
 import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
-public class Solution {
+class TimeConversion {
 
     static String timeConversion(String s) {
         String[] time = s.split(":");
         String hour = time[0];
         if(time[2].charAt(2) == 'A'){
-
             if(hour.equals("12")){
-
                hour = "00";
-            }
+           }
         }else{
             if(!hour.equals("12")){
                 int sum = Integer.parseInt(hour) + 12;
