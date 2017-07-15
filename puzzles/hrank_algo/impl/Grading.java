@@ -1,24 +1,21 @@
 import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
-public class Solution {
+public class Grading {
 
     static int[] solve(int[] grades){
         int length = grades.length;
-        int[] arrayToRet = new int[length];
+        int[] roundedResults = new int[length];
         for(int i=0; i < length; i++){
             int modDiff = grades[i] % 5;
             if(grades[i] < 38 || modDiff < 3){
-                arrayToRet[i] = grades[i];
+                roundedResults[i] = grades[i];
             }else{
-                arrayToRet[i] = grades[i] + (5 - modDiff);
+                roundedResults[i] = grades[i] + (5 - modDiff);
 
             }
         }
-        return arrayToRet;
+        return roundedResults;
     }
 
     public static void main(String[] args) {
