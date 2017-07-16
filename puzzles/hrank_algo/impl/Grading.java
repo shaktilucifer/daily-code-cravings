@@ -19,19 +19,13 @@ public class Grading {
     }
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int[] grades = new int[n];
-        for(int grades_i=0; grades_i < n; grades_i++){
-            grades[grades_i] = in.nextInt();
-        }
+        int grades[] = new int[]{33,38,73,67}; // output: 33,40,75,67 
+        int grades1[] = new int[]{0,100,39,40}; // output: 0,100,40,40
         int[] result = solve(grades);
         for (int i = 0; i < result.length; i++) {
-            System.out.print(result[i] + (i != result.length - 1 ? "\n" : ""));
+            System.out.print(result[i]);
         }
         System.out.println("");
-        
-
     }
 }
 // Sample Input 0
