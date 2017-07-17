@@ -1,8 +1,5 @@
 import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class PosNegZero {
 
@@ -11,6 +8,7 @@ public class PosNegZero {
         int n = arr.length;
         double zeroes=0.0,pos=0.0,neg = 0.0;
         for(int i=0; i < n; i++){
+            //total is jus a dummy variable, to enable the ternary operator, and saves multiple ifs 
            double total = arr[i] > 0 ? pos++ : arr[i] < 0 ? neg++ : zeroes++;
         }
         System.out.println(pos/n);
