@@ -1,10 +1,6 @@
 import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
-public class Solution {
+public class DistAppleOrange {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -42,3 +38,16 @@ public class Solution {
         System.out.println(orangeCounter);
     }
 }
+
+
+// Sample Input 0
+
+// 7 11
+// 5 15
+// 3 2
+// -2 2 1
+// 5 -6
+// Sample Output 0
+
+// 1
+// 1
