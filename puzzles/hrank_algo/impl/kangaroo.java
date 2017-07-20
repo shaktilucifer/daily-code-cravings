@@ -1,8 +1,9 @@
 import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+// Tips to future me:
+// stop thinking to mathematically. less is more
+//think of edge cases and run time exceptions
+// 
 
 public class Solution {
 
