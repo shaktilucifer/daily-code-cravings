@@ -24,3 +24,17 @@ public class Solution {
 }
 
             
+// Sample Input 1
+
+// 0 2 5 3
+// Sample Output 1
+
+// NO
+                           
+                           
+// Sample Input 0
+
+// 0 3 4 2
+// Sample Output 0
+
+// YES
