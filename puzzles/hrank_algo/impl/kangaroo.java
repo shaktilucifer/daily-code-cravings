@@ -16,12 +16,11 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int x1 = in.nextInt();
-        int v1 = in.nextInt();
-        int x2 = in.nextInt();
-        int v2 = in.nextInt();
-        String result = kangaroo(x1, v1, x2, v2);
+     
+        String result = kangaroo(0, 3, 2, 4);
         System.out.println(result);
+        System.out.println(kangaroo(0,2,5,3);
     }
 }
+
+            
