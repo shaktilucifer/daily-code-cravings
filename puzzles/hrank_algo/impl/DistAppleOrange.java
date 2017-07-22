@@ -23,21 +23,14 @@ public class DistAppleOrange {
     }
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int s = in.nextInt();
-        int t = in.nextInt();
-        int a = in.nextInt();
-        int b = in.nextInt();
-        int m = in.nextInt();
-        int n = in.nextInt();
-        int[] apple = new int[m];
-        for(int apple_i=0; apple_i < m; apple_i++){
-            apple[apple_i] = in.nextInt();
-        }
-        int[] orange = new int[n];
-        for(int orange_i=0; orange_i < n; orange_i++){
-            orange[orange_i] = in.nextInt();
-        }
+        int s = 7;
+        int t = 11;
+        int a =  5;
+        int b = 15;
+        int m = 3;
+        int n = 3;
+        int[] apple = new int[]{-2,2,1};
+        int[] orange = new int[]{5,-6};
         printNumFruits(apple,orange);
     }
 }
