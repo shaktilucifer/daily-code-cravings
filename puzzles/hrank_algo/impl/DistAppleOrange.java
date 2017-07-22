@@ -45,5 +45,5 @@ public class DistAppleOrange {
 // 5 -6
 // Sample Output 0
 
-// 1
-// 1
+// 1  apples within distance
+// 1 orange within distance
