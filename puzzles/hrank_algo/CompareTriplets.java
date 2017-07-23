@@ -1,8 +1,4 @@
 import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class CompareTriplets {
     
@@ -28,20 +24,11 @@ public class CompareTriplets {
     }
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int a0 = in.nextInt();
-        int a1 = in.nextInt();
-        int a2 = in.nextInt();
-        int b0 = in.nextInt();
-        int b1 = in.nextInt();
-        int b2 = in.nextInt();
-        int[] result = solve(a0, a1, a2, b0, b1, b2);
+        int[] result = solve(5, 6, 7, 3, 6, 10);
         int[] result1 = solve(3,4,5,12,1,1);
-            printArray(result);
+        printArray(result);
         printArray(result1);
-                System.out.println("");
-        
-
+        System.out.println("");
     }
 }
 // Sample Input
