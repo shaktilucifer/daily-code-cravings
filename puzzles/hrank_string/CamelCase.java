@@ -1,10 +1,6 @@
 import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
-public class Solution {
+public class CamelCase {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -18,3 +14,13 @@ public class Solution {
         System.out.print(words);
     }
 }
+
+
+// Sample Input
+
+// saveChangesInTheEditor
+
+//5 words in camelcase format and hence output is 5
+// Sample Output
+
+// 5
