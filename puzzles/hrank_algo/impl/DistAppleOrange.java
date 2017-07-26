@@ -5,6 +5,13 @@ public class DistAppleOrange {
           
         int appleCounter = 0;
         int orangeCounter = 0;
+        //Test case 1
+        int s = 7;
+        int t = 11;
+        int a =  5;
+        int b = 15;
+        int m = 3;
+        int n = 3;
         
         for(int i=0; i < m; i++){
             int appleDist = apple[i] + a;
@@ -23,12 +30,7 @@ public class DistAppleOrange {
     }
 
     public static void main(String[] args) {
-        int s = 7;
-        int t = 11;
-        int a =  5;
-        int b = 15;
-        int m = 3;
-        int n = 3;
+   
         int[] apple = new int[]{-2,2,1};
         int[] orange = new int[]{5,-6};
         printNumFruits(apple,orange);
