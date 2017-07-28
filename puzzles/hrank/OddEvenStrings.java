@@ -13,10 +13,12 @@ import java.util.*;
 public class OddEvenStrings {
 
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        int testCases = s.nextInt();
+        int testCases = 2;
+        String[] arr = new String[testCases];
+        arr[0] = "Hacker";
+        arr[1] = "Rank";
         for(int i= 0; i < testCases;i++){
-            String testCase = s.next();
+            String testCase = arr[i];
             char[] testCaseArr = testCase.toCharArray();
             for(int j=0; j <= testCaseArr.length -1; j = j + 2){
                 System.out.print(testCaseArr[j]);
