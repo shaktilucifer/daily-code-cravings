@@ -31,4 +31,11 @@ public class RecordBreak {
 }
 // Note probably try doing this with a tree.
 
+// Sample Input 0
 
+// 9
+// 10 5 20 20 4 5 2 25 1
+
+// Sample Output 0
+
+// 2 4
