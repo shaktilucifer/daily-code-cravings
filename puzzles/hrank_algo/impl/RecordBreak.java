@@ -1,8 +1,4 @@
 import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 public class RecordBreak {
 
@@ -30,11 +26,9 @@ public class RecordBreak {
             s[s_i] = in.nextInt();
         }
         int[] result = getRecord(s);
-        String separator = "", delimiter = " ";
-        for (Integer val : result) {
-            System.out.print(separator + val);
-            separator = delimiter;
-        }
-        System.out.println("");
+        System.out.println(result[0]+" "+ result[1]);
     }
 }
+// Note probably try doing this with a tree.
+
+
