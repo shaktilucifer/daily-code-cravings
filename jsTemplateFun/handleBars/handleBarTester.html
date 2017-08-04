@@ -28,6 +28,14 @@
         <li>{{this.smogon.firstName}}</li>
         {{/each}}
     </ul>
+
+    <div class="entry">
+  {{!-- only output author name if an author exists --}}
+  {{#if author}}
+    <h1>{{author.firstName}}</h1>
+    {{author.genre}}
+  {{/if}}
+</div>
 </script>
 
 </html>

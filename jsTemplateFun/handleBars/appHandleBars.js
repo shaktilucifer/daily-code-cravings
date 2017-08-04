@@ -11,7 +11,11 @@ $(document).ready(function () {
                     firstName: "smog"
                 }
             }
-        ]
+        ],
+        author: {
+            firstName: "impl",
+            genre:"mystery"
+        }
     };
 
     var hbsRenderedElement = handleBarsCompileAndDataBind
