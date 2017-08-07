@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.*;
 
 public class Solution {
 
@@ -9,7 +8,9 @@ public class Solution {
         int seedString = sc.next();
         char a = 'a';
         int ascA = (int)a;
-        
+        char z ='z';
+        char A = 'A';
+        char Z ='Z';
         
         
     }
