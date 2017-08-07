@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class Solution {
+public class CeaserCipher {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -11,6 +11,10 @@ public class Solution {
         char z ='z';
         char A = 'A';
         char Z ='Z';
+        
+        for(int i=0; i<stringLength; i++){
+          // DO something to rotate the ascci by n rotations   
+        }
         
         
     }
