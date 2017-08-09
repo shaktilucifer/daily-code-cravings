@@ -15,14 +15,14 @@
 </body>
 
 
-
+<!-- try precompiling templates for performance -->
 <script id="entry-template" type="text/x-handlebars-template">
     <ul class="people_list">
         {{#each people}}
         <li id={{this}}>{{this}}</li>
         {{/each}}
     </ul> <br />
-
+   // nested json fields accessing
     <ul>
         {{#each nestedPeople}}
         <li>{{this.smogon.firstName}}</li>
