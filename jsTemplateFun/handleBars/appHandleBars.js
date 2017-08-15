@@ -36,9 +36,7 @@ function togglerButtonEvent() {
         $("#entry-template")
         , {
             people: [
-                "smog",
-                "impl",
-                "lucy"
+                "smog"
             ]
         }
         );
