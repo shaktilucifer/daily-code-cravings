@@ -1,10 +1,6 @@
 import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
-class Solution {
+class ReverseArray {
     
     public void printReverse(int[] arr,int n){        
         //Printing in reverse
