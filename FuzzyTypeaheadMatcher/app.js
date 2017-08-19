@@ -1,9 +1,6 @@
 $(document).ready(function() {
 
     var veggies = [
-        "Kidney Beans",
-        "Gourd",
-        "Drumstick",
         "onions",
         "Peas",
         "Zucchini",
@@ -11,11 +8,11 @@ $(document).ready(function() {
     ];
 
     var books = [{
-        "title": "Pancreas",
+        "title": "Kill a mockingjaybird",
         "author": "John Doe"
     }, {
-        "title": "breasts",
-        "author": "..."
+        "title": "blueberry finn",
+        "author": "mike twaing"
     }];
     var fuzzyhound = new FuzzySearch({
         source: veggies
