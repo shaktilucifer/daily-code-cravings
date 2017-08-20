@@ -10,8 +10,6 @@
 // Pair found at index 0 and 2 (8 + 2)
 // OR
 // Pair found at index 1 and 4 (7 + 3)
-import java.util.*;
-import java.lang.*;
 import java.io.*;
 class PairSum {
  class Pair {
