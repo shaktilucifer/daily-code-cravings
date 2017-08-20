@@ -1,5 +1,4 @@
-import java.util.*;
-import java.lang.*;
+
 import java.io.*;
 
 /**
@@ -33,8 +32,8 @@ class InsertionBinary {
         System.out.println(index);
         index = i.findInsertionPoint(arr,2.2f);
         System.out.println(index);
-		index = i.findInsertionPoint(arr,-2.2f);
-		System.out.println(index);
+	index = i.findInsertionPoint(arr,-2.2f);
+	System.out.println(index);
 
     }
 }
