@@ -6,6 +6,7 @@
      int data;
      Node next;
   }
+  Just a blackbox function without class for reuse
 */
 Node Insert(Node head,int data) {
     Node temp = head;
