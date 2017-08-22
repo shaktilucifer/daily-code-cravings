@@ -17,7 +17,6 @@ void Print(Node head) {
 }
     public static void main(String[] args){
        PrintLinkedList p = new PrintLinkedList();
-        p.print(null);
     }
 
 }
