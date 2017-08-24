@@ -1,10 +1,7 @@
-// Just function
 import java.io.*;
 
 class PrintLinkedList{
-    
-
-void Print(Node head) {
+    void Print(Node head) {
     if (head == null) {} else {
         Node temp = head;
         while (temp.next != null) {
